@@ -16,4 +16,6 @@ Webpack based boilerplate for producing libraries (Input: ES6, Output: universal
 * `npm run dev` - produces development version of your library and runs a watcher
 * `npm run test` - well ... it runs the tests :)
 
-
+## Usage
+- `.bool()` return true/false
+- `.gclid()` return the gclid
