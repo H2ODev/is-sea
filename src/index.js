@@ -7,6 +7,7 @@ export default class isSEA {
 
     this.cookieName = cookieName;
     this.paramName = paramName;
+    this.error = false;
     param = this._get(this.paramName);
 
     if (param) {
@@ -16,6 +17,10 @@ export default class isSEA {
     return false;
   }
 
+  error() {
+    return this.error;
+  }
+
   bool() {
     try {
       if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
@@ -23,7 +28,7 @@ export default class isSEA {
       }
       return false;
     } catch (err) {
-      console.log('Incompatible Browser');
+      this.error = 'Incompatible Browser';
       return false;
     }
   }
@@ -42,7 +47,7 @@ export default class isSEA {
       }
       return false;
     } catch (err) {
-      console.log('Incompatible Browser');
+      this.error = 'Incompatible Browser';
       return false;
     }
   }
