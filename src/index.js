@@ -17,10 +17,6 @@ export default class isSEA {
     return false;
   }
 
-  error() {
-    return this.error;
-  }
-
   bool() {
     try {
       if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
