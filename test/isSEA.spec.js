@@ -1,5 +1,5 @@
-import chai from 'chai';
-import isSEA from '../lib/isSEA.js';
+//import chai from 'chai';
+//import isSEA from '../lib/isSEA.js';
 
 chai.expect();
 
@@ -12,8 +12,8 @@ describe('Given an instance of isSEA', function () {
     sea = new isSEA();
   });
   describe('when I need the name', function () {
-    it('should return the name', () => {
-      expect(lib.name).to.be.equal('Library');
+    it('should return the name', function () {
+      expect(sea.cookieName).to.be.equal('isSEA');
     });
   });
 });

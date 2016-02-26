@@ -17,23 +17,34 @@ export default class isSEA {
   }
 
   bool() {
-    if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
-      return true;
+    try {
+      if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
+        return true;
+      }
+      return false;
+    } catch (err) {
+      console.log('Incompatible Browser');
+      return false;
     }
-    return false;
   }
 
   gclid() {
     var gclid;
 
-    if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
-      gclid = JSON.parse(jsCookie.get(this.cookieName)).gclid;
-      if (gclid) {
-        return gclid;
+    try {
+
+      if (jsCookie.get(this.cookieName) && Object.keys(jsCookie.get(this.cookieName)).length !== 0) {
+        gclid = JSON.parse(jsCookie.get(this.cookieName)).gclid;
+        if (gclid) {
+          return gclid;
+        }
+        return false;
       }
       return false;
+    } catch (err) {
+      console.log('Incompatible Browser');
+      return false;
     }
-    return false;
   }
 
   _get(param) {
