@@ -14,31 +14,81 @@ module.exports = function(config) {
   }
 
   // Browsers to run on Sauce Labs
-  var customLaunchers = {                                 // 1
-    sl_chrome: {
-      base: 'SauceLabs',
-      browserName: 'chrome',
-      platform: 'Windows 7',
-      version: '35'
-    },
-    sl_firefox: {
-      base: 'SauceLabs',
-      browserName: 'firefox',
-      version: '30'
-    },
-    sl_ios_safari: {
-      base: 'SauceLabs',
-      browserName: 'iphone',
-      platform: 'OS X 10.9',
-      version: '7.1'
-    },
-    sl_ie_11: {
-      base: 'SauceLabs',
-      browserName: 'internet explorer',
-      platform: 'Windows 8.1',
-      version: '11'
-    }
-};
+  var customLaunchers = {
+              'iOS': [{
+                browserName: 'iphone',
+                platform: 'OS X 10.10',
+                version: '8.2',
+                deviceName: 'iPhone Simulator'
+              }, {
+                browserName: 'iphone',
+                platform: 'OS X 10.10',
+                version: '8.2',
+                deviceName: 'iPad Simulator'
+              }],
+              'android': [{
+                browserName: 'android',
+                platform: 'Linux',
+                version: '5.1',
+                deviceName: 'Android Emulator'
+              }],
+              'mac': [{
+                browserName: 'safari',
+                platform: 'OS X 10.10',
+                version: '8.0'
+              }, {
+                browserName: 'firefox',
+                platform: 'OS X 10.10',
+                version: '36.0'
+              }, {
+                browserName: 'chrome',
+                platform: 'OS X 10.10',
+                versiono: '41.0'
+              }],
+              'windows7': [{
+                browserName: 'internet explorer',
+                platform: 'Windows 7',
+                version: '11.0'
+              }, {
+                browserName: 'internet explorer',
+                platform: 'Windows 7',
+                version: '10.0'
+              }, {
+                browserName: 'internet explorer',
+                platform: 'Windows 7',
+                version: '9.0'
+              }, {
+                browserName: 'opera',
+                platform: 'Windows 7',
+                version: '12.12'
+              }],
+              'windowsXP': [{
+                browserName: 'internet explorer',
+                platform: 'Windows XP',
+                version: '8.0'
+              }, {
+                browserName: 'internet explorer',
+                platform: 'Windows XP',
+                version: '7.0'
+              }, {
+                browserName: 'internet explorer',
+                platform: 'Windows XP',
+                version: '6.0'
+              }],
+              'linux': [{
+                browserName: 'opera',
+                platform: 'Linux',
+                version: '12.15'
+              }, {
+                browserName: 'firefox',
+                platform: 'Linux',
+                version: '37.0'
+              }, {
+                browserName: 'chrome',
+                platform: 'Linux',
+                version: '41.0'
+              }]
+            };
 
   config.set({
 
