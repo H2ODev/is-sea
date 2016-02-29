@@ -19,3 +19,5 @@ Webpack based boilerplate for producing libraries (Input: ES6, Output: universal
 ## Usage
 - `.bool()` return true/false
 - `.gclid()` return the gclid
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/mo_h2om.svg)](https://saucelabs.com/u/mo_h2om)
