@@ -16,4 +16,10 @@ describe('Given an instance of isSEA', function () {
       expect(sea.cookieName).to.be.equal('isSEA');
     });
   });
+  describe('when I need the value', function () {
+    it('it should return a boolean', function () {
+      expect(sea.cookieName).to.be.equal('isSEA');
+      expect(sea.bool()).to.be.a('boolean');
+    });
+  });
 });
