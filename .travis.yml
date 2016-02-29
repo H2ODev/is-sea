@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+env:
+  email: false
+addons:
+  sauce_connect:
+    username: "mo_h2om"
+    access_key: "f1784780-4096-4f76-ab5a-74f294a251f5"
+before_script: npm install -g karma-cli
