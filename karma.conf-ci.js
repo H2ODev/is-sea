@@ -74,7 +74,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
 
     sauceLabs: {
-      testName: 'Karma and Sauce Labs demo',
+      testName: 'isSEA Browser Compatibility',
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       startConnect: false
     },
