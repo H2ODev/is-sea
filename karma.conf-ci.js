@@ -62,6 +62,11 @@ module.exports = function(config) {
                 platform: 'Windows 7',
                 version: '12.12'
               }],
+              'windows8.1': [{
+                browserName: 'chrome',
+                platform: 'Windows 8.1',
+                version: '48.0'
+              }],
               'windowsXP': [{
                 browserName: 'internet explorer',
                 platform: 'Windows XP',
