@@ -28,7 +28,6 @@
     "karma-mocha": "^0.2.2",
     "karma-safari-launcher": "^0.1.1",
     "karma-sauce-launcher": "^0.3.0",
-    "karma-ios-launcher": "^0.0.3",
     "mocha": "2.3.4",
     "webpack": "1.12.9",
     "yargs": "3.32.0"
